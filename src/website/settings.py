@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "192.168.1.99",
     "webserver.wamserver.synology.me",
     "127.0.0.1",
+    "localhost"
     ]
 
 
