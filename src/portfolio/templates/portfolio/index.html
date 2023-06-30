@@ -1,13 +1,11 @@
-{% load tailwind_tags %}
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    {% tailwind_css %}
-</head>
-<body>
-    <h1 class = "text-3xl font-bold text-purple-500"> Mon portfolio</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="Text-3xl font-bold"> Mon parcours professionnel</h1>
+{% for emploie in emploies %}
+    <h2>{{ emploie.poste }}</h2>
+    <p>{{ emploie.entreprise }}</p>
+    <a href="{{ emploie.get_absolute_url }}">
+    clic ici
+    </a> 
+{% endfor %}
+{% endblock %}

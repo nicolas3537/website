@@ -1,0 +1,18 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfilo</title>
+    {% tailwind_css %}
+</head>
+<body class="flex-auto flex-colum">
+    <a href="{% url 'index' %}">
+    <h1> Voici mon portfilo</h1>
+    </a>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

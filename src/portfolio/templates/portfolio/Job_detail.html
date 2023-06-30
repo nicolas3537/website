@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="Text-3xl font-bold"> Mon poste chez {{ emploie.entreprise }}</h1>
+<h2> j'avais le poste de {{emploie.poste }}</h2>
+<p> j'ai tenu les missions suivantes</p>
+<p> {{emploie.presentation}}</p>
+
+
+{% endblock %}
