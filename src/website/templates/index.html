@@ -1,0 +1,14 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfilo</title>
+    {% tailwind_css %}
+</head>
+<body class="flex-auto flex-colum">
+    <h1 class = "text-3xl font-bold text-yellow-500"> Voici le portfilo de {{prenon | upper}}</h1>
+    <h2 class="text-2xl text-gray-200">Nous sommes le {{date | date:"l d F Y"}}, il est {{date | time:"G\hi"}}min </h2>
+</body>
+</html>
