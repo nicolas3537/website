@@ -1,7 +1,15 @@
-{% extends 'base.html' %}
-{% block content %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site web</title>
+    {% tailwind_css %}
+</head>
+<body class="h-screen items-center justify-center style="background: #edf2f7;">
 <!-- component -->
-<div class="container w-full h-screen items-center justify-center">
+    <div class="container w-full h-screen items-center justify-center">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <div class="text-gray-800 bg-gray-50 dark-mode:text-gray-200 dark-mode:bg-gray-800">
     <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -34,9 +42,9 @@
         </div>    
         </nav>
     </div>
-</div>
+    </div>
+{% block content %}
 
-<h1 class = "text-3xl font-bold text-yellow-500"> Voici le portfilo de {{prenon | upper}}</h1>
-<h2 class="text-2xl text-gray-200">Nous sommes le {{date | date:"l d F Y"}}, il est {{date | time:"G\hi"}}min </h2>
-<p> Ceci est un test</p>
 {% endblock %}
+</body>
+</html>
